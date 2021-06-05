@@ -35,29 +35,57 @@
       <section id="stay">
         <h2>Find the perfect vacation rental</h2>
         <!-- Create a form here -->
+        <form>
+          <div class="row">
+            <label for="location">Location</label>
+            <input
+              id="location"
+              type="text"
+              placeholder="Search destination"
+              name="location"
+            />
+          </div>
+          <div class="row">
+            <label for="date-arrival">Arrive</label>
+            <input id="date-arrival" type="date" />
+          </div>
+          <div class="row">
+            <label for="date-depart">Depart</label>
+            <input id="date-depart" type="date" />
+          </div>
+          <div class="row">
+            <label for="type">Type</label>
+            <select name="Type" size="1">
+              <option value="Apartment">Apartment</option>
+              <option value="Town-home">Town-home</option>
+            </select>
+          </div>
+          <button type="submit">Search</button>
+        </form>
       </section>
 
       <!-- About -->
       <section id="about" class="alternate-background">
         <h2>About</h2>
+        <div class="row-big-screen">
+          <img
+            src="images/vacation-rental-pool.png"
+            alt="Thinkfulbnb - Vacation rental pool"
+          />
 
-        <img
-          src="images/vacation-rental-pool.png"
-          alt="Thinkfulbnb - Vacation rental pool"
-        />
+          <img
+            src="images/vacation-rental-inside-stone.png"
+            alt="Thinkfulbnb - Vacation rental inside stone"
+          />
 
-        <img
-          src="images/vacation-rental-inside-stone.png"
-          alt="Thinkfulbnb - Vacation rental inside stone"
-        />
-
-        <p>
-          Fusce porta odio nunc, eget pretium massa rutrum sit amet. Etiam
-          fringilla aliquam dapibus. Maecenas quis nisi sed turpis aliquam
-          porttitor eget ut quam. Sed vel scelerisque ex. Duis in pharetra
-          neque, at tempus lorem. Aenean mi magna, posuere at quam sed, euismod
-          gravida neque.
-        </p>
+          <p>
+            Fusce porta odio nunc, eget pretium massa rutrum sit amet. Etiam
+            fringilla aliquam dapibus. Maecenas quis nisi sed turpis aliquam
+            porttitor eget ut quam. Sed vel scelerisque ex. Duis in pharetra
+            neque, at tempus lorem. Aenean mi magna, posuere at quam sed,
+            euismod gravida neque.
+          </p>
+        </div>
       </section>
 
       <!-- Ideas -->
