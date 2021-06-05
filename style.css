@@ -28,6 +28,25 @@ section {
 section.alternate-background {
   background-color: #00a699;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+section.alternate-background img {
+  width: 100%;
+  margin: 10px, 10px;
+  padding: 15px 0px;
+}
+
+#ideas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+}
+
+#ideas img {
+  width: 100%;
 }
 
 main img {
@@ -53,6 +72,8 @@ main img {
 /* -------  Navigation ------- */
 
 header {
+  display: flex;
+  flex-direction: column;
   background-color: #ff385c;
   padding: 20px 20px 0 20px;
   text-align: center;
@@ -62,6 +83,11 @@ header {
   font-family: "Pangolin", cursive;
   font-size: 72px;
   color: #fff;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 header nav ul li {
@@ -104,6 +130,11 @@ form button {
   width: 100%;
 }
 
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
 /* -------  Footer ------- */
 
 footer {
@@ -117,3 +148,52 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+/*display for big screen like desktop*/
+
+@media all and (min-width: 600px) {
+  /* -------  Navigation ------- */
+
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #ff385c;
+    padding: 10px 20px 0 20px;
+    text-align: center;
+  }
+
+  header nav {
+    padding-top: 20px;
+    margin-bottom: 10px;
+  }
+  /*form*/
+  #stay form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  form button {
+    padding: auto;
+    margin-bottom: 0px;
+    margin-left: 50px;
+
+    width: 25%;
+  }
+  /*-------About--------*/
+  section.alternate-background {
+    flex-direction: row;
+  }
+  .row {
+    flex-direction: column;
+    margin-left: 10px;
+  }
+
+  .row-big-screen {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  img {
+    width: 10%;
+  }
+}
