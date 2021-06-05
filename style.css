@@ -148,7 +148,7 @@ footer p {
 }
 
 /* -------  Media Query ------- */
-/*display for big screen like desktop*/
+/*display(more than 600px) for big screen like desktop*/
 
 @media all and (min-width: 600px) {
   /* -------  Navigation ------- */
@@ -195,5 +195,6 @@ footer p {
   }
   img {
     width: 10%;
+    object-fit: contain;
   }
 }
