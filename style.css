@@ -150,7 +150,7 @@ footer p {
 /* -------  Media Query ------- */
 /*display for big screen like desktop*/
 
-@media all and (min-width: 600px) {
+@media screen and (min-width: 600px) {
   /* -------  Navigation ------- */
 
   header {
@@ -181,7 +181,9 @@ footer p {
   }
   /*-------About--------*/
   section.alternate-background {
-    flex-direction: row;
+    flex-direction: column;
+    padding-left: 0px;
+    padding-bottom: 2px;
   }
   .row {
     flex-direction: column;
@@ -193,7 +195,73 @@ footer p {
     flex-direction: row;
     justify-content: space-between;
   }
-  img {
-    width: 10%;
+  .row-big-screen img {
+    max-width: 24%;
+    margin-left: 15px;
+    margin-top: -14px;
+  }
+
+  #about div p {
+    padding: 30px 10px;
+  }
+
+  /*...Ideas....*/
+  #ideas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #ideas h3 {
+    margin-bottom: 10px;
+  }
+
+  #ideas img {
+    max-width: 488px;
+    max-height: 276px;
+    margin-bottom: 28px;
+  }
+
+  #ideas .ideas-images {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #ideas .ideas-images .column-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 96px;
+  }
+
+  #ideas .ideas-images .column-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 16px;
+  }
+  /*----host---*/
+
+  #host .alternate-background {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #host img {
+    width: 42%;
+  }
+
+  #host {
+    flex-direction: row;
+    justify-content: space-around;
+    /* padding-left: 0px; */
+    padding-bottom: 2px;
+  }
+
+  #host div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px 10px 0px 10px;
   }
 }
