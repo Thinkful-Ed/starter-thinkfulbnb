@@ -148,7 +148,7 @@ footer p {
 }
 
 /* -------  Media Query ------- */
-/*display for big screen like desktop*/
+/*display(more than 600px) for big screen like desktop*/
 
 @media screen and (min-width: 600px) {
   /* -------  Navigation ------- */
