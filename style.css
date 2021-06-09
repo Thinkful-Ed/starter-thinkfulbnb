@@ -265,4 +265,15 @@ footer p {
     justify-content: center;
     margin: 0px 10px 0px 10px;
   }
+
+  .to-hide{
+    display: none;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .repeat-image{
+    display: none;
+  }
+  
 }
