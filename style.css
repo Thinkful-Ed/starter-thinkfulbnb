@@ -2,6 +2,7 @@
 
 body {
   font-family: "Lato", sans-serif;
+  display: grid;
 }
 
 h2 {
@@ -25,13 +26,14 @@ section {
   padding: 20px;
 }
 
+
 section.alternate-background {
   background-color: #00a699;
   color: #fff;
 }
 
 main img {
-  width: 100px;
+  width: 100%;
 }
 
 /* ---  Groups & Items --- */
@@ -62,6 +64,19 @@ header {
   font-family: "Pangolin", cursive;
   font-size: 72px;
   color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
 }
 
 header nav ul li {
@@ -83,10 +98,18 @@ header nav ul li a:hover {
 form {
   border: 2px solid #ff385c;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 form label {
   font-weight: bold;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
 }
 
 form select,
@@ -117,3 +140,71 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (min-width: 480px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .logo {
+    font-size: 48px;
+  }
+
+  .group {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .item {
+    justify-content: center;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .about-img {
+    width: 100%;
+  }
+
+  .ideas-img {
+    width: 100%;
+    flex: 2;
+  }
+
+  .alternate-background {
+    display: flex-start;
+  }
+
+  .item-double {
+    flex: 2;
+    margin: 10px;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  form div {
+    flex-direction: column;
+    display: flex;
+  }
+
+  form button {
+    flex: 1;
+  }
+
+  form select,
+  form input {
+    margin-bottom: 0px;
+  }
+
+}
