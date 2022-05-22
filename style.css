@@ -31,7 +31,8 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
+  text-align: center;
 }
 
 /* ---  Groups & Items --- */
@@ -64,8 +65,18 @@ header {
   color: #fff;
 }
 
+header nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+header nav ul {
+  display: flex;
+}
+
 header nav ul li {
   list-style-type: none;
+  display: flex;
 }
 
 header nav ul li a {
@@ -74,15 +85,19 @@ header nav ul li a {
   padding: 0 20px 0 0;
 }
 
-header nav ul li a:hover {
-  color: #bdbdbd;
-  text-decoration: none;
-}
-
 /* -------  Search Form ------- */
 form {
   border: 2px solid #ff385c;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
+  align-items: space-around;
 }
 
 form label {
@@ -92,16 +107,21 @@ form label {
 form select,
 form input {
   margin-bottom: 20px;
-  width: 180px;
+  width: 50%;
 }
 
 form button {
   background-color: #ff385c;
   border: none;
   color: #fff;
-  font-size: 24px;
+  font-size: auto;
   padding: 15px;
   width: 100%;
+}
+
+form button div {
+  display: flex;
+  justify-content: center;
 }
 
 /* -------  Footer ------- */
@@ -117,3 +137,69 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (min-width: 650px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+
+  .group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+
+  header h1 {
+    margin: 14px 0;
+    padding-top: 0;
+  }
+
+  header nav {
+    margin-top: 8px;
+  }
+
+  header nav ul {
+    align-items: center;
+  }
+
+  header nav ul li a:hover {
+    color: #bdbdbd;
+    text-decoration: none;
+  }
+
+  .vacation-form {
+    flex-direction: row;
+  }
+
+  .vacation-form .item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .item label,
+  .item input,
+  .item select,
+  .item button {
+  display: flex;
+  width: 100%;
+  flex: 1;
+  }
+
+  .grid-column {
+    display: flex;
+    flex: 1;
+    flex-direction: column; 
+    margin: 10px;
+  }
+
+  .grid-row {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+  }
+}
