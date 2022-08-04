@@ -1,7 +1,444 @@
 /* -------  General Styles ------- */
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Lato", sans-serif;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0 10px 10px 10px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+p {
+  line-height: 1.5em;
+  margin: 0;
+}
+
+section {
+  padding: 20px;
+}
+
+section.alternate-background {
+  background-color: #00a699;
+  color: #fff;
+}
+
+main img {
+  width: 100px;
+}
+
+/* ---  Groups & Items --- */
+
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  flex: 1;
+  margin-bottom: 10px;
+}
+
+.item-double {
+  flex: 2;
+}
+
+/* -------  Navigation ------- */
+
+header {
+  background-color: #ff385c;
+  padding: 20px 20px 0 20px;
+  text-align: center;
+}
+
+.logo {
+  font-family: "Pangolin", cursive;
+  font-size: 72px;
+  color: #fff;
+}
+
+header nav ul li {
+  list-style-type: none;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 20px 0 0;
+}
+
+header nav ul li a:hover {
+  color: #bdbdbd;
+  text-decoration: none;
+}
+
+#menu {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+/* -------  Search Form ------- */
+form {
+  border: 2px solid #ff385c;
+  padding: 10px;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form select,
+form input {
+  margin-bottom: 20px;
+  width: 180px;
+}
+
+form button {
+  background-color: #ff385c;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  padding: 15px;
+  width: 100%;
+}
+
+form div {
+  display: flex;
+  justify-content:space-between;
+}
+
+/* -------  About ------- */
+
+#about {
+  display: flex;
+  flex-direction: column;
+}
+
+img.item {
+  width: 100%;
+}
+
+img.item-double {
+  width: 100%;
+}
+
+#host img {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+/* -------  Footer ------- */
+
+footer {
+  background-color: #ff385c;
+}
+
+footer p {
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* -------  Media Query ------- */
+
+@media all and (max-width: 380px) {
+  .logo {
+    font-size: 48px;
+  }  
+
+}
+
+@media all and (min-width: 480px) {
+
+  form {
+    display: flex;
+    justify-content:space-between;
+    gap: .5rem;
+  }
+
+  form div {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  form button {
+    max-width: 20%;
+  }
+
+  form select,
+form input {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+  .group {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px
+  }
+
+  #about .group img.item {
+    width: 0;
+  }
+  
+  img.item-double {
+    width: 0;
+  }
+
+  #ideas .group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #host .group img.item {
+    width: 0;
+  }
+}
+
+@media all and (min-width: 650px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    align-items: center;
+  }
+}
+
+@media all and (min-width: 1000px) {
+  form select,
+  form input {
+    margin-bottom: 20px;
+    width: 180px;
+  }
+}/* -------  General Styles ------- */
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0 10px 10px 10px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+p {
+  line-height: 1.5em;
+  margin: 0;
+}
+
+section {
+  padding: 20px;
+}
+
+section.alternate-background {
+  background-color: #00A699;
+  color: #fff;
+}
+
+main img {
+  width: 100%;
+}
+
+/* ---  Groups & Items --- */
+
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  flex: 1;
+  margin: 10px;
+}
+
+.item-double {
+  flex: 2;
+}
+
+/* -------  Navigation ------- */
+
+header {
+  background-color: #FF385C;
+  padding: 20px 20px 0 20px;
+  text-align: center;
+}
+
+.logo {
+  font-family: "Pangolin", cursive;
+  font-size: 57px;
+  color: #fff;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav ul li {
+  list-style-type: none;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 20px 0 0;
+}
+
+header nav ul li a:hover {
+  color: #bdbdbd;
+  text-decoration: none;
+}
+
+/* -------  Search Form ------- */
+form {
+  border: 2px solid #FF385C;
+  padding: 10px;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
+}
+
+form select, form input {
+  margin-bottom: 20px;
+  width: 140px;
+}
+
+form button {
+  background-color: #FF385C;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  padding: 15px;
+  width: 100%;
+}
+
+/* -------  Footer ------- */
+
+footer {
+  background-color: #FF385C;
+}
+
+footer p {
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* -------  Media Query ------- */
+
+@media all and (min-width: 480px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .logo {
+    margin: 14px 0 14px 20px;
+    padding-top: 0;
+    font-size: 42px;
+  }
+
+  form select, form input {
+    margin-bottom: 20px;
+    width: 180px;
+  }
+  
+  header nav ul {
+    align-items: center;
+  }
+
+  .group {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  form div {
+    flex-direction: column;
+  }
+
+  form button {
+    flex: 1;
+  }
+  
+  form select, form input {
+    margin-bottom: 0px;
+  }
+}/* -------  General Styles ------- */
+/* Create a page layout using flexbox.
+Implement appropriate media queries for responsive design.
+Follow a mobile-first development approach.
+-Navigation and menu must look correnct 
+Use responsive navigation.
+Use appropriate input types for the form. 
+-DON'T use any floats 
+nav links nav to correct place
+*/
+
+/* @media all and(min-width: 768px){ */
+
+/* general conntent */
+
+
+  header { 
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* justify-content: flex-end; */
+    /* justify-content: space-between;
+    align-items: center; */
+
+  }
+
+ #menu { 
+  align-items: center;
+  display: flex; 
+
+}
+  
+body {
+  font-family: "Lato", sans-serif;
+
+}
+.group{ 
+  flex-direction:column; 
 }
 
 h2 {
@@ -64,6 +501,13 @@ header {
   color: #fff;
 }
 
+
+/* header nav {  
+  .display:fex;
+justify-content: center;
+} */
+
+
 header nav ul li {
   list-style-type: none;
 }
@@ -83,6 +527,7 @@ header nav ul li a:hover {
 form {
   border: 2px solid #ff385c;
   padding: 10px;
+  flex-direction: column;
 }
 
 form label {
@@ -93,6 +538,8 @@ form select,
 form input {
   margin-bottom: 20px;
   width: 180px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 form button {
@@ -102,6 +549,11 @@ form button {
   font-size: 24px;
   padding: 15px;
   width: 100%;
+}
+
+form > div {  
+  display: flex;
+  justify-content: space-between;
 }
 
 /* -------  Footer ------- */
@@ -117,3 +569,122 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+@media all and (min-width: 600px) {
+  form {
+
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 100%;
+  }
+}
+
+
+@media all and (min-width: 480px) {
+  body {
+    padding-right: 0px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+/* header class */
+  #menu {
+    font-size: 80%;
+  }
+
+  form {
+    /* display: flex;
+    flex-wrap: wrap; */
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 50%;
+  }
+
+  form label {
+    display: flex;
+    padding-right: 10px;
+  }
+
+  form input {
+    width: 95%;
+    font-size: large;
+  }
+
+  form>div {
+    display: inline-flex;
+    justify-content: space-between;
+  }
+
+  form button {
+    width: 100%;
+    display: inline-flex;
+    justify-content: flex-end;
+    /* margin-left: 100px; */
+    /* font-size: small; */
+  }
+
+  .criteria {
+    flex-direction: column;
+  }
+
+  .row {
+    display: flex;
+  }
+
+  #ideas .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .col {
+    padding-top: 20px;
+    padding-bottom: 0px;
+  }
+
+  .column {
+    flex: 33.33%;
+    margin: auto 0;
+    margin-left: 15px;
+    font-size: small;
+    align-items: center;
+  }
+
+  .area-single {
+    display: flex;
+    flex: 1;
+  }
+
+  .area-double {
+    display: flex;
+    flex: 2;
+  }
+
+  /* ------- ideas -------*/
+
+  .about-host-background h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+#ideas img{
+  flex-grow: inherit;
+
+}
+
+@media all and (min-width: 600px) {
+  form {
+
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 100%;
+  }
+}
+
+/* cphart follow allong */
+
+
+
+
+/* } */
