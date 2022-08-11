@@ -1,11 +1,6 @@
 /* -------  General Styles ------- */
 
-* {
-  box-sizing: border-box;
-}
-
 body {
-    width: 100%;
   font-family: "Lato", sans-serif;
 }
 
@@ -19,6 +14,7 @@ h2 {
 h3 {
   font-size: 18px;
   font-weight: 500;
+  font-weight: bold;
 }
 
 p {
@@ -40,16 +36,20 @@ main img {
 }
 
 /* ---  Groups & Items --- */
+
 .group {
   display: flex;
-  flex-direction: column;
+  flex-direction: column
 }
+
 .group img {
   width: 100%;
+  margin-bottom: 10px;
 }
+
 .item {
   flex: 1;
-  margin-bottom: 10px;
+  margin: 10px;
 }
 
 .item-double {
@@ -69,13 +69,11 @@ header {
   font-size: 72px;
   color: #fff;
 }
-
 header nav ul {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  padding-left: 0;
-  padding-bottom: 20px;
+  text-align: center;
+  padding: 0 0 20px 0;
 }
 
 header nav ul li {
@@ -88,41 +86,27 @@ header nav ul li a {
   padding: 0 20px 0 0;
 }
 
-/* header nav ul li a:hover {
+header nav ul li a:hover {
   color: #bdbdbd;
   text-decoration: none;
-} */
-
-/* #menu {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 10px;
-} */
+}
 
 /* -------  Search Form ------- */
 form {
   border: 2px solid #ff385c;
   padding: 10px;
-  max-width: 100%;
-}
-
-form button {
-  background-color: #ff385c;
-  color: #fff;
-  font-size: 24px;
-  padding: 15px;
-  width: 100%;
-  border: none;
-}
-
-#vacaForm {
   display: flex;
-  justify-content: space-between;
-  padding: 0 7px;
+  flex-direction: column;
 }
 
 form label {
   font-weight: bold;
+}
+
+.label-input-style {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px 10px 20px;
 }
 
 form select,
@@ -130,26 +114,15 @@ form input {
   margin-bottom: 20px;
   width: 180px;
 }
-/* -------  About ------- */
 
-/* #about {
-  display: flex;
-  flex-direction: column;
-}
-
-img.item {
+form button {
+  background-color: #ff385c;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  padding: 15px;
   width: 100%;
 }
-
-img.item-double {
-  width: 100%;
-}
-
-#host img {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-} */
-
 
 /* -------  Footer ------- */
 
@@ -164,60 +137,63 @@ footer p {
 }
 
 /* -------  Media Query ------- */
-
-@media screen and (min-width: 480px) {
-
-  /* ------ NavBar ------ */
+@media all and (min-width: 480px) {
   header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-
   }
-  header nav ul {
-    padding-top: 14px;
-  }
-
+  
   .logo {
-    font-size: 3rem;
+    font-size: 36px;
   }
 
-  header nav ul li a:hover {
-    color: #bdbdbd;
-    text-decoration: none;
-  }
-
-  /* ------- Form ------ */
   form {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: baseline;
+    flex-wrap: wrap;
   }
 
-  #vacaForm {
-    display: flex;
+  form div {
+    margin: 0;
     flex-direction: column;
+    justify-content: space-between;
+    padding: 0 40px 0 0;
   }
 
-  #vacaForm button {
-    transform: translateY(25%);
-    width: 11rem;
+  form input, form select{
+    margin-bottom: 0;
   }
 
-  /* ----- Grouping ----- */
+  form button {
+    padding: 10px 56px;
+  }
+
   .group {
-    display: flex;
     flex-direction: row;
     align-items: center;
   }
 
-  .ideas-top {
-    display: flex;
+  #about img {
+    align-items: center;
+  }
+  
+  .grow1 {
+    flex-grow: 1;
   }
 
-  .ideas-bot {
-    display: flex;
+  .grow2 {
+    flex-grow: 2;
   }
+
+  #ideas .group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  #host .item img {
+    flex-grow: 2;
+  }
+
 }
