@@ -23,6 +23,7 @@ p {
 
 section {
   padding: 20px;
+  justify-content: center;
 }
 
 section.alternate-background {
@@ -31,7 +32,10 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  display: flex; 
+  align-items: center;
+  width: 100%;
+  padding: 15px 0 15px 0;
 }
 
 /* ---  Groups & Items --- */
@@ -58,10 +62,17 @@ header {
   text-align: center;
 }
 
+
 .logo {
   font-family: "Pangolin", cursive;
   font-size: 72px;
   color: #fff;
+}
+header nav ul {
+  display: flex; 
+  flex-direction: row; 
+  justify-content: center;
+  padding-bottom: 20px;
 }
 
 header nav ul li {
@@ -81,6 +92,8 @@ header nav ul li a:hover {
 
 /* -------  Search Form ------- */
 form {
+  display: flex;
+  flex-direction: column;
   border: 2px solid #ff385c;
   padding: 10px;
 }
@@ -104,6 +117,15 @@ form button {
   width: 100%;
 }
 
+label{
+  font-weight: bolder;
+}
+.styleForm{
+  display: flex; 
+  justify-content: space-between;
+  padding: 10px
+}
+
 /* -------  Footer ------- */
 
 footer {
@@ -117,3 +139,38 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+@media all and (min-width: 600px){
+  header {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo{
+    font-size: 35px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+  }
+  .styleForm{
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  form{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  form button{
+    font-size: 24px;
+    width: 120px;
+    height: 60px;
+  }
+  main img{
+    width: 240px;
+  }
+
+  section:first-child{
+    display: flex;
+    flex-direction: row; 
+  }
+}
