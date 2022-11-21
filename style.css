@@ -2,6 +2,7 @@
 
 body {
   font-family: "Lato", sans-serif;
+  display: grid;
 }
 
 h2 {
@@ -111,7 +112,7 @@ form label {
 form select,
 form input {
   margin-bottom: 20px;
-  width: 65%;
+  width: 180px;
   border-style: solid;
   border-color: grey;
   border-radius: 6%;
@@ -140,27 +141,39 @@ footer p {
 }
 
 /* -------  Media Query ------- */
-@media all and (min-width: 600px) {
+@media all and (min-width: 480px) {
   header {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-between;   
       padding: 0 20px;
-  }
+    }
+  
+    header h1 {
+        font-size: 48px;
+        margin: 14px 0;
+        padding-top: 0;
+    }
 
-  header h1 {
-      font-size: 48px;
-      margin: 14px 0;
-      padding-top: 0;
-  }
-
-  header nav {
-      padding: 10px;
-  }
+      header nav {
+        padding: 10px;
+    }
 
   .group {
     display: flex;
     flex-direction: row;
-    align-items: center;  
+    align-items: center;
+  }
+
+  form label {
+    display: flex;
+    justify-content: space-between;
+    vertical-align: top;
+  }
+
+  form input,
+  form select {
+    float: left;
+    vertical-align: bottom;
   }
   
   .item {
@@ -173,14 +186,10 @@ footer p {
   }
 
  form {
-  flex-direction: row;
- }
-
- .item label
-  , .item input 
-  , .item select 
-  , .item button{
     display: flex;
-    width: 100%;
-  }
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+ }
 }
