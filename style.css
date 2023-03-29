@@ -160,6 +160,30 @@ footer p {
     width: 100vw;
   }
 
+  form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  form ul {
+    width: 16vw;
+    height: auto;
+  }
+
+  form button {
+    width: 10vw;
+    height: 5vw;
+    margin: 0;
+  }
+
+
+  form ul li{
+    display: flex;
+    flex-direction: column;
+  }
+
   #about div{
     display: flex;
     flex-direction: row;
