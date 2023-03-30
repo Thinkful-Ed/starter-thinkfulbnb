@@ -163,18 +163,28 @@ footer p {
   form {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
   }
 
   form ul {
-    width: 16vw;
+    width: 12vw;
     height: auto;
   }
 
+  form label {
+    font-size: 10px;
+  }
+
+  form input, form select {
+    width: 50px;
+  }
+
   form button {
-    width: 10vw;
-    height: 5vw;
+    width: 200px;
+    height: 70px;
     margin: 0;
   }
 
