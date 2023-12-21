@@ -56,12 +56,12 @@ section.alternate-background {
 
 .container {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .row {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
 }
 
 .col {
