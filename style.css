@@ -178,7 +178,7 @@ footer p {
   }
   header nav ul {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
   }
 
   form {
