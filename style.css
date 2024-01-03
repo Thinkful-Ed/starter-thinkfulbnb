@@ -184,9 +184,8 @@ footer p {
   form {
     display: flex;
     justify-content: center;
-    align-items: safe-center;
-    gap: 20px;
-    
+    align-items: center;
+    flex-wrap: wrap;
   }
 
   .row {
@@ -197,7 +196,7 @@ footer p {
 
   .col {
     display: flex;
-    flex: row;
+    flex-direction: column;
   }
 
   img {
