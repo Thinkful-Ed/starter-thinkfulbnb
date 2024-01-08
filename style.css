@@ -1,7 +1,7 @@
 /* -------  General Styles ------- */
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 h2 {
@@ -26,7 +26,7 @@ section {
 }
 
 section.alternate-background {
-  background-color: #00a699;
+  background-color: #00A699;
   color: #fff;
 }
 
@@ -38,19 +38,8 @@ main img {
 
 .group {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 100px;
-}
-
-@media all and (min-width: 800px) {
-  section,
-  h1 {
-    padding: 0 10%;
-  }
-
-  .group {
-    flex-direction: row;
-  }
+  flex-direction: row;
+  padding: 20px;
 }
 
 .item {
@@ -62,29 +51,32 @@ main img {
   flex: 2;
 }
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-}
+.img-container {
+  margin: 10px
 
-.image-container {
-  flex: 1;
-  min-width: 200px;
-  max-width: 400px; 
 }
 
 /* -------  Navigation ------- */
 
 header {
-  background-color: #ff385c;
+  background-color: #FF385C;
   padding: 20px 20px 0 20px;
   text-align: center;
 }
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 72px;
+  font-size: 57px;
   color: #fff;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
 }
 
 header nav ul li {
@@ -102,21 +94,9 @@ header nav ul li a:hover {
   text-decoration: none;
 }
 
-header nav ul {
-  display: flex;
-  justify-content: center;
-}
-
-header nav ul li {
-  list-style-type: none;
-}
-
-
-
 /* -------  Search Form ------- */
 form {
-  display: flex;
-  border: 2px solid #ff385c;
+  border: 2px solid #FF385C;
   padding: 10px;
 }
 
@@ -124,14 +104,18 @@ form label {
   font-weight: bold;
 }
 
-form select,
-form input {
+form div {
+  display: flex;
+  justify-content: space-between;
+}
+
+form select, form input {
   margin-bottom: 20px;
-  width: 180px;
+  width: 140px;
 }
 
 form button {
-  background-color: #ff385c;
+  background-color: #FF385C;
   border: none;
   color: #fff;
   font-size: 24px;
@@ -142,7 +126,7 @@ form button {
 /* -------  Footer ------- */
 
 footer {
-  background-color: #ff385c;
+  background-color: #FF385C;
 }
 
 footer p {
@@ -153,29 +137,49 @@ footer p {
 
 /* -------  Media Query ------- */
 
-@media all and (min-width: 600px) {
-  header {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 30px;
-  }
-  header h1 {
-    margin: 14px;
-    padding-top: 0;
-  }
-  header nav ul li a:hover {
-    color: #bdbdbd;
-  }
-}
-
 @media all and (min-width: 768px) {
   header {
     display: flex;
     justify-content: space-between;
-    padding: 0 30px;
+    padding: 0;
   }
-  header h1 {
-    margin: 14px;
+
+  .logo {
+    margin: 14px 0 14px 20px;
     padding-top: 0;
+    font-size: 42px;
+  }
+
+  form select, form input {
+    display: flex;
+    margin-bottom: 20px;
+    width: 80%;
+  }
+  
+  header nav ul {
+    align-items: center;
+  }
+
+  .group {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  form div {
+    flex-direction: column;
+  }
+
+  form button {
+    flex: 1;
+  }
+  
+  form select, form input {
+    margin-bottom: 0px;
   }
 }
