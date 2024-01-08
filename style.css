@@ -1,19 +1,19 @@
 /* -------  General Styles ------- */
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 h2 {
   font-size: 26px;
   font-weight: 400;
-  margin: 10 10px 0px 10px;
+  margin: 0 10px 10px 10px;
   text-align: center;
 }
 
 h3 {
   font-size: 18px;
-  font-weight: 800;
+  font-weight: 500;
 }
 
 p {
@@ -21,9 +21,12 @@ p {
   margin: 0;
 }
 
+section {
+  padding: 20px;
+}
 
 section.alternate-background {
-  background-color: #00a699;
+  background-color: #00A699;
   color: #fff;
 }
 
@@ -35,7 +38,7 @@ main img {
 
 .group {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding: 20px;
 }
 
@@ -48,18 +51,22 @@ main img {
   flex: 2;
 }
 
+.img-container {
+  margin: 10px
+
+}
 
 /* -------  Navigation ------- */
 
 header {
-  background-color: #ff385c;
+  background-color: #FF385C;
   padding: 20px 20px 0 20px;
   text-align: center;
 }
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 72px;
+  font-size: 57px;
   color: #fff;
 }
 
@@ -70,12 +77,6 @@ header nav {
 
 header nav ul {
   display: flex;
-  padding-left: 0;
-}
-
-header nav ul li a:hover {
-  color: #bdbdbd;
-  text-decoration: none;
 }
 
 header nav ul li {
@@ -83,38 +84,38 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color:#fff;
+  color: #fff;
   text-decoration: none;
   padding: 0 20px 0 0;
 }
 
-
+header nav ul li a:hover {
+  color: #bdbdbd;
+  text-decoration: none;
+}
 
 /* -------  Search Form ------- */
 form {
-  display: flex;
-  border: 2px solid #ff385c;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-form div {
-  display:flex;
-  justify-content: space-between;
+  border: 2px solid #FF385C;
+  padding: 10px;
 }
 
 form label {
   font-weight: bold;
 }
 
-form select,
-form input {
+form div {
+  display: flex;
+  justify-content: space-between;
+}
+
+form select, form input {
   margin-bottom: 20px;
-  width: 100%;
+  width: 140px;
 }
 
 form button {
-  background-color: #ff385c;
+  background-color: #FF385C;
   border: none;
   color: #fff;
   font-size: 24px;
@@ -122,12 +123,10 @@ form button {
   width: 100%;
 }
 
-
-
 /* -------  Footer ------- */
 
 footer {
-  background-color: #ff385c;
+  background-color: #FF385C;
 }
 
 footer p {
@@ -138,29 +137,49 @@ footer p {
 
 /* -------  Media Query ------- */
 
-@media all and (min-width: 480px) {
-  header {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 30px;
-  }
-  header h1 {
-    margin: 14px;
-    padding-top: 0;
-  }
-  header nav ul li a:hover {
-    color: #bdbdbd;
-  }
-}
-
 @media all and (min-width: 768px) {
   header {
     display: flex;
     justify-content: space-between;
-    padding: 0 30px;
+    padding: 0;
   }
-  header h1 {
-    margin: 14px;
+
+  .logo {
+    margin: 14px 0 14px 20px;
     padding-top: 0;
+    font-size: 42px;
+  }
+
+  form select, form input {
+    display: flex;
+    margin-bottom: 20px;
+    width: 80%;
+  }
+  
+  header nav ul {
+    align-items: center;
+  }
+
+  .group {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  form div {
+    flex-direction: column;
+  }
+
+  form button {
+    flex: 1;
+  }
+  
+  form select, form input {
+    margin-bottom: 0px;
   }
 }
