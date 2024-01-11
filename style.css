@@ -7,22 +7,18 @@ body {
 h2 {
   font-size: 26px;
   font-weight: 400;
-  margin: 0 10px 10px 10px;
+  margin: 10px 10px 0px 10px;
   text-align: center;
 }
 
 h3 {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 800;
 }
 
 p {
   line-height: 1.5em;
   margin: 0;
-}
-
-section {
-  padding: 20px;
 }
 
 section.alternate-background {
@@ -31,7 +27,7 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
 }
 
 /* ---  Groups & Items --- */
@@ -39,6 +35,8 @@ main img {
 .group {
   display: flex;
   flex-direction: column;
+  padding: 20px;
+
 }
 
 .item {
@@ -48,6 +46,7 @@ main img {
 
 .item-double {
   flex: 2;
+
 }
 
 /* -------  Navigation ------- */
@@ -62,6 +61,16 @@ header {
   font-family: "Pangolin", cursive;
   font-size: 72px;
   color: #fff;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
+  padding-left: 0;
 }
 
 header nav ul li {
@@ -81,18 +90,26 @@ header nav ul li a:hover {
 
 /* -------  Search Form ------- */
 form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border: 2px solid #ff385c;
-  padding: 10px;
+  
 }
 
 form label {
   font-weight: bold;
 }
 
+form div {
+  display: flex;
+  justify-content: space-between;
+}
+
 form select,
 form input {
   margin-bottom: 20px;
-  width: 180px;
+  width: 65%;
 }
 
 form button {
@@ -117,3 +134,67 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (min-width: 768px) {
+  p {
+    font-size: 14px;
+  }
+  header {
+    display: flex;
+  }
+  header nav {
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  header nav ul {
+    justify-content: right;
+  }
+
+  .logo {
+    font-size: 42px;
+  }
+  form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-direction: wrap;
+  }
+  form div {
+    flex: 1;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  form button {
+    flex: 1;
+  }
+  .group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #ideas .group {
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  #ideas div {
+    display: flex;
+    flex-basis: calc(50% - 40px);
+    justify-content: center;
+    flex-direction: column;
+  }
+  .host{
+    flex-direction: column;
+    justify-content: center;
+  }
+ body {
+   display: grid;
+ }
+ .host-list {
+  font-size: 14px;
+ }
+}
